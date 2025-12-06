@@ -1,0 +1,20 @@
+// Decimal number to binary number calculator
+
+#include<stdio.h>
+
+void convert_to_binary(int n){
+    if(n>1)
+        convert_to_binary(n/2);
+    printf("%d",n%2);
+}
+int main(){
+    int n;
+    printf("Enter the number to convert it into Binary number: ");
+    scanf("%d", &n);
+    if(n==0) printf("0");
+    else{
+       convert_to_binary(n);
+       printf("\n");
+    }
+    return 0;
+}
